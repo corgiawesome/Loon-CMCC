@@ -1,0 +1,28 @@
+#!name=🆃🅾🅿🅼🅾🅳 CMCCiTV
+#!desc=中国移动iTV DNS修复（Loon版）
+#!author=LOWERTOP / PIXMAN
+#!homepage=https://github.com/LOWERTOP/Shadowrocket-First
+
+[Rule]
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaMobile/ChinaMobile.list,DIRECT
+DOMAIN-SUFFIX,cmvideo.cn,DIRECT
+DOMAIN-SUFFIX,dnsany.com,DIRECT
+
+[Host]
+
+# 指定解析DNS
+*.dnsany.com = server:114.114.114.114
+
+# 地区来源
+hlszymgsplive.miguvideo.com = pixman.io.fifalive.dnsany.com
+
+# APTV来源
+studentlive.migucloud.com = pixman.io.fifalive.dnsany.com
+zqhswlive.itv.cmvideo.cn = pixman.io.fifalive.dnsany.com
+
+# PIXMAN来源
+cache.ott.ystenlive.itv.cmvideo.cn = pixman.io.ystenlive.dnsany.com
+cache.ott.bestlive.itv.cmvideo.cn = pixman.io.bestlive.dnsany.com
+cache.ott.wasulive.itv.cmvideo.cn = pixman.io.wasulive.dnsany.com
+cache.ott.fifalive.itv.cmvideo.cn = pixman.io.fifalive.dnsany.com
+cache.ott.hnbblive.itv.cmvideo.cn = pixman.io.hnbblive.dnsany.com
