@@ -1,26 +1,26 @@
-#!name=🆃🅾🅿🅼🅾🅳 CMCCiTV
-#!desc=中国移动iTV DNS修复（Loon版）
-#!author=LOWERTOP / PIXMAN
-#!homepage=https://github.com/LOWERTOP/Shadowrocket-First
+[Plugin]
+name = 🆃🅾🅿🅼🅾🅳 CMCCiTV
+desc = 中国移动iTV平台中的部分域名在非移动网络下会被解析到CF的DNS服务IP上导致无法访问。本插件默认使用114 DNS及fifalive映射目标，如需修改请手动编辑该插件。
+icon = https://raw.githubusercontent.com/Orz-3/mini/master/Color/ChinaMobile.png
 
 [Rule]
-RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/ChinaMobile/ChinaMobile.list,DIRECT
+# 规则部分 Loon 与小火箭通用
+RULE-SET,https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Shadowrocket/ChinaMobile/ChinaMobile.list,DIRECT
 DOMAIN-SUFFIX,cmvideo.cn,DIRECT
 DOMAIN-SUFFIX,dnsany.com,DIRECT
 
 [Host]
+# 指定解析DNS (将小火箭的 server:114.114.114.114 转换为 Loon 语法)
+*.dnsany.com = 114.114.114.114
 
-# 指定解析DNS
-*.dnsany.com = server:114.114.114.114
-
-# 地区来源
+# 地区 来源 (已替换默认参数：pixman.io.fifalive.dnsany.com)
 hlszymgsplive.miguvideo.com = pixman.io.fifalive.dnsany.com
 
-# APTV来源
+# APTV 来源
 studentlive.migucloud.com = pixman.io.fifalive.dnsany.com
 zqhswlive.itv.cmvideo.cn = pixman.io.fifalive.dnsany.com
 
-# PIXMAN来源
+# PIXMAN 来源
 cache.ott.ystenlive.itv.cmvideo.cn = pixman.io.ystenlive.dnsany.com
 cache.ott.bestlive.itv.cmvideo.cn = pixman.io.bestlive.dnsany.com
 cache.ott.wasulive.itv.cmvideo.cn = pixman.io.wasulive.dnsany.com
